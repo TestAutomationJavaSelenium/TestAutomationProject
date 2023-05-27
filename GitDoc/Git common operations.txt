@@ -1,0 +1,39 @@
+Git common operations:
+
+git checkout -b branchname: branchname can be anything as per the dev requirment. git checkout -b branchname is used to create a new branch with name as branchname. we can say that by this we are creating a local branch from existing branch.
+ 
+example: git checkout -b manishalocalbranch 
+
+git checkout main/master: this command is used to move from any(local)branch to main branch.
+
+git checkout branchname: this command is used to move to any branch whose name is branchname. 
+
+git pull origin main: used to take the latest pull from git repository.
+
+git pull: used to take the latest pull from the remote git repository forcefully. 
+
+git init: for the initialisation of file for a git repository
+
+git status:used to check whether file is modified, added/not added in the staging environment of git or not. Added file indicated with green color and not added file will indicate with red color.
+
+git add filename: use to add modified files in the staging environment of git. git add filename this command is used to add only one file at a time.
+
+git add .: used to add all the modified files in the system.
+
+git commit -m "message for git commit " : it is used to mention that some changes has been done in the repository 
+
+git push origin branchname: this command is used to push local branch(branchname) on git repository.
+
+git stash:1. This is the command used to copeup with updated origin repository.
+          2. When developer is in the mid of any task/userstory/branch functionality coverage and in between developer is assinged with new task/userstory/branch functionality coverage then to save the existing work/code developer need to stash/save in some temperory storage provided by git.
+          3. It is sometimes helps to avoid the merge conflict.
+
+git stash pop: It is used to apply the stashed code inside the branch.
+
+git stash list: Used to get the list of all the stash entries.
+
+
+
+
+
+
