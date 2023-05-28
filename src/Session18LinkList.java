@@ -1,6 +1,12 @@
 import java.util.*;
 import java.util.Vector.*;
 
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.Vector;
+
+
 public class Session18LinkList {
 
     static LinkedList<Integer> intLinkList = new LinkedList<>();
@@ -8,15 +14,26 @@ public class Session18LinkList {
 
     LinkedList<String> strLinkList = new LinkedList<>();
 
+
     List<Integer> listDataFromVector = new ArrayList<>();  //gaurav
     Vector<Integer> vectorTakingElement = new Vector<>();
 
     Scanner sc = new Scanner(System.in);
 
+    Vector<Integer> vectorSample = new Vector<>();
+
+    Vector<String> vectorStringSample = new Vector<>();
+
+
     public static void main(String[] args) {
         Session18LinkList session18LinkList = new Session18LinkList();
         //session18LinkList.sortLinkList(intLinkList);
-        session18LinkList.sortVectorList();
+
+        session18LinkList.sortVectorList();  //gaurav
+
+        // session18LinkList.vectorExample();
+        session18LinkList.sortVector();  //manisha
+
 
     }
 
@@ -70,6 +87,7 @@ public class Session18LinkList {
 
     }
 
+
     public Vector<Integer> vectorPassingToList(Vector<Integer> jass) {
         int j = 0;
         do {
@@ -87,6 +105,65 @@ public class Session18LinkList {
         listDataFromVector = vectorPassingToList(vectorTakingElement);
         Collections.sort(listDataFromVector);
         System.out.println(listDataFromVector);
+    }
+
+
+    //vector is list only, it gives fast processing but at the time of large transactions it impact and sometimes gets failed
+    public void vectorExample() {
+
+        int i = 0;
+
+        vectorSample.add(22);
+        vectorSample.add(220);
+        vectorSample.add(44);
+        vectorSample.add(2);
+
+        System.out.println("Please enter the values which you want to add: ");
+        do {
+            vectorSample.add(sc.nextInt());
+            i++;
+        }
+        while (i <= 5);
+
+        System.out.println("Here is your vector values : " + vectorSample);
+
+        vectorSample.addElement(99);
+        vectorSample.addElement(199);
+        vectorSample.addElement(299);
+
+        System.out.println("vectorSample after  the add element: " + vectorSample);
+
+        vectorSample.add(1, 100);
+        vectorSample.insertElementAt(10000, 0);
+        System.out.println("added element At indexes" + vectorSample);
+        vectorSample.remove(0);
+        vectorSample.remove(0);
+        System.out.println("After remove from vector: " + vectorSample);
+    }
+
+
+    public Vector<String> VectorStringExample(Vector<String> manisha) {
+
+
+        System.out.println("Please enter your String values below : ");
+        int j = 0;
+        do {
+            manisha.add(sc.next());
+
+            j++;
+        }
+        while (j < 4);
+
+        return manisha;
+
+    }
+
+    public void sortVector() {
+
+        Collections.sort(VectorStringExample(vectorStringSample));
+
+        System.out.println("vectorStringSample: " + vectorStringSample);
+
     }
 
 
