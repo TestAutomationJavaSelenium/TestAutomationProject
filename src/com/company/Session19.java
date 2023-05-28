@@ -10,7 +10,8 @@ public class Session19 {
 
     public static void main(String[] args){
         Session19 session19 = new Session19();
-        session19.stackExample();
+        //session19.stackExample();
+        session19.sortStack();
     }
 
     public Stack<Integer> stackExample(){
@@ -37,8 +38,8 @@ public class Session19 {
 
         System.out.println("Here value after the values POP: " + stackSample);
 
-        stackSample.remove(0);
-        System.out.println("Here value after the values remove: " + stackSample);
+       // stackSample.remove(0);
+       // System.out.println("Here value after the values remove: " + stackSample);
 
         return stackSample;
     }
@@ -47,8 +48,9 @@ public class Session19 {
 
       //  List<Integer> listToStoreStack= new ArrayList<>();
        // listToStoreStack = Collections.sort(stackExample());
-        Collections.sort(stackExample());
-        System.out.println("Here value after the values remove: " + stacknew);
+        stacknew = stackExample();
+        Collections.sort(stacknew);
+        System.out.println("Here value after sort: " + stacknew);
 
     }
 
