@@ -95,7 +95,7 @@ public class Session18LinkList {
             j++;
         }
         while (j < 4);
-        System.out.println("Please eneter vector element" + jass);
+        System.out.println("Please enter vector element" + jass);
         return jass;
 
     }
